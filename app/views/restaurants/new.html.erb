@@ -1,12 +1,20 @@
 <div class="container">
-
+  <h2>Create a new Restaurant</h2>
   <%= simple_form_for @restaurant do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
+
+    <%# If we wanted to use already created tags and add the association, this (and the below) would've been enough  %>
+    <h3>Choose a tag for this restaurant</h3>
     <%= f.association :tags, multiple: true, include_hidden: false %>
     <%# f.input :tags, collection: Tag.all, input_html: { multiple: true }, include_hidden: false %>
     <%# f.association :tags, multiple: true, as: :check_boxes %>
     <%# f.association :tags, as: :radio_buttons %>
+    <h3>Or Add a new tag for this restaurant</h3>
+    <%= f.simple_fields_for :tags do |tag_form| %>
+      <%= tag_form.input :name, label: "Tag Name" %>
+    <% end %>
+    
     <%= f.submit %>
   <% end %>
 
