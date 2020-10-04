@@ -1,6 +1,6 @@
 # GOAL
 
-This is a demo to show-case how to create a model with a nested model in the same form in a rails app.
+This is a demo to show-case how to create a model and a nested model (or several nested models) in the same form in a rails app.
 
 It was created from [this repo](https://github.com/andrerferrer/create-multiple-tags-demo#goal).
 
