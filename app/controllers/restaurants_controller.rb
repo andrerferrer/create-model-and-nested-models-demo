@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @restaurant.tags.build
   end
 
   def create
@@ -30,7 +31,7 @@ class RestaurantsController < ApplicationController
   end
 
   def strong_params
-    params.require(:restaurant).permit(Restaurant::STRONG_PARAMS)
+    params.require(:restaurant).permit(Restaurant::STRONG_PARAMS, tags_attributes: [ :name ])
   end
 
   def tagged_restaurants
