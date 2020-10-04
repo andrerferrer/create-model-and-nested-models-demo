@@ -1,8 +1,8 @@
 # GOAL
 
-This is a demo to show-case how to create models with tags in a rails app.
+This is a demo to show-case how to create a model with a nested model in the same form in a rails app.
 
-It was created from [this repo](https://github.com/andrerferrer/model-with-tags-demo#goal).
+It was created from [this repo](https://github.com/andrerferrer/create-multiple-tags-demo#goal).
 
 [You can also check my other demos](https://github.com/andrerferrer/dedemos/blob/master/README.md#ded%C3%A9mos).
 
